@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="/style/normalize.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style/index.css">   
+    <link rel="stylesheet" href="../style/media/index.css">
+</head>
+<body>
+    <div class="main-page">
+        
+        <header>
+            <div class="header-wrapper">
+                <div class="logo">
+                    <img src="../img/SVG/logotype.svg" alt="logo">
+                </div>
+                <div class="navigation">
+                    <div class="burger-container">
+                        <ul class="nav">
+                            <li><a href="#">
+                              <span class="nav-icon">
+                                <img src="../img/SVG/icon_modal_send/shorts_icon.svg" alt="shorts">
+                              </span>SHORTS</a></li>
+                            <li class="nav-item"><a href="#">
+                              <span class="nav-icon">
+                                <img src="../img/SVG/icon_modal_send/pants.svg" alt="pants">
+                              </span>PANTS</a></li>
+                            <li><a href="#">
+                              <span class="nav-icon">
+                                <img src="../img/SVG/icon_modal_send/trousers.svg" alt="shorts">
+                              </span>SHIRTS</a></li>
+                            <li><a href="#">
+                              <span class="nav-icon">
+                                <img src="../img/SVG/icon_modal_send/accessories.svg" alt="accessories">
+                              </span>ACCESSORIES</a></li>
+                            <li><a href="#">
+                              <span class="nav-icon">
+                                <img src="../img/SVG/icon_modal_send/sale.svg" alt="accessories">
+                              </span>SALE</a></li>
+                          </ul>
+                    </div>
+
+                    <div class="search-box">
+                        <div class="search-btn fa-2x"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <input type="search" id="search-field" placeholder="SEARCH ENTIRE STORE">
+                    </div>
+
+                    <div class="basket-box">
+                        <span class="basket-counter hide-basket">0</span>         
+                        <svg class="cart" role="img" aria-label="Shopping cart line animation" viewBox="0 0 128 128" width="35px" height="35px" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+                                <g class="cart__track" stroke="hsla(0,10%,10%,0.1)">
+                                    <polyline points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80" />
+                                    <circle cx="43" cy="111" r="13" />
+                                    <circle cx="102" cy="111" r="13" />
+                                </g>
+                                <g class="cart__lines" stroke="currentColor">
+                                    <polyline class="cart__top" points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80" stroke-dasharray="338 338" stroke-dashoffset="-338" />
+                                    <g class="cart__wheel1" transform="rotate(-90,43,111)">
+                                        <circle class="cart__wheel-stroke" cx="43" cy="111" r="13" stroke-dasharray="81.68 81.68" stroke-dashoffset="81.68" />
+                                    </g>
+                                    <g class="cart__wheel2" transform="rotate(90,102,111)">
+                                        <circle class="cart__wheel-stroke" cx="102" cy="111" r="13" stroke-dasharray="81.68 81.68" stroke-dashoffset="81.68" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search product list -->
+        <ul class="search-product-list hide" id="product-name"><!-- Search list generated JS --></ul>
+
+        <main>
+            <nav class="main-search">
+                <div class="home-navigation-container">
+                    <span><a href="../"><img src="../img/SVG/house.svg" alt="home"></a></span>
+                    <span><a href="../">HOME</a></span>
+                    <span><img src="../img/SVG/right-arrow.svg" alt="arrow"></span>
+                    <span>SHORTS</span>
+                </div>
+                <div class="main-search-line">
+                    <input type="text" name="search-line" placeholder="SEARCH">
+                </div>
+                <ul class="product-list"></ul>
+            </nav>
+
+            <section class="products">
+
+                <button class="products-filter_btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.4" d="M3.34985 2H12.2499C12.9899 2 13.5999 2.61001 13.5999 3.35001V4.82999C13.5999 5.36999 13.2599 6.04 12.9299 6.38L10.0299 8.94C9.62991 9.28 9.35986 9.94999 9.35986 10.49V13.39C9.35986 13.79 9.08988 14.33 8.74988 14.54L7.80987 15.15C6.92987 15.69 5.71985 15.08 5.71985 14V10.43C5.71985 9.95999 5.44987 9.35001 5.17987 9.01001L2.61987 6.31C2.27987 5.97 2.00989 5.36999 2.00989 4.95999V3.41C1.99989 2.61 2.60985 2 3.34985 2Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12.0002V15.0002C2 20.0002 4 22.0002 9 22.0002H15C20 22.0002 22 20.0002 22 15.0002V9.00024C22 5.88024 21.22 3.92024 19.41 2.90024C18.9 2.61024 17.88 2.39023 16.95 2.24023" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.4" d="M13 13H18" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path opacity="0.4" d="M11 17H18" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                </button>
+
+                <aside class="products-filter">
+                    <div class="products-filter-container">
+                        <div class="color filter-wrapper">
+                            <div class="filter-name">SIZE <span class="filter-arrow"><i class="fa-solid fa-angle-down fa-lg" style="color: #a04955;"></i></span></div>
+                            <div class="filter-parameters-size hide">
+                                <!--size-parameter-->
+                            </div>
+                        </div>
+                        <div class="size filter-wrapper">
+                            <div class="filter-name">COLOR <span class="filter-arrow"><i class="fa-solid fa-angle-down fa-lg fa-rotate-180" style="color: #a04955;"></i></span></div>
+                            <div class="filter-parameters-color hide">
+                            <!--color-parameter-->
+                            </div>
+                        </div>
+
+                        <div class="collections filter-wrapper">
+                            <div class="filter-name">brands<span class="filter-arrow"><i class="fa-solid fa-angle-down fa-lg fa-rotate-180" style="color: #a04955;"></i></span></div>
+                            <div class="filter-parameters-brands hide">
+                                <!--brand name-->
+                            </div>
+                        </div>
+
+                        <div class="inseam filter-wrapper">
+                            <div class="filter-name">price<span class="filter-arrow"><i class="fa-solid fa-angle-down fa-lg fa-rotate-180" style="color: #a04955;"></i></span></div>
+                            <div class="filter-parameters-price hide">
+                                <button class="btn-filter-price" data-flag="min" type="button">Min-Max</button>
+                                <button class="btn-filter-price" data-flag="max"  type="button">Max-Min</button>
+                            </div>
+                        </div>
+
+                        <div class="sustainable filter-wrapper">
+                            <div class="filter-name">alphabetical sorting<span class="filter-arrow"><i class="fa-solid fa-angle-down fa-lg fa-rotate-180" style="color: #a04955;"></i></span></div>
+                            <div class="filter-parameters-sorting hide">
+                                <button class="btn-filter-sorting" data-flag="a" type="button">A-z</button>
+                                <button class="btn-filter-sorting filter-parameters-prices" data-flag="z"  type="button">Z-a</button>
+                            </div>
+                        </div>
+
+                        <button class="reset-all-filters" type="button">reset all filters</button>
+                    </div>
+                </aside>
+                <!-- Прихований заголовок. -->
+                <h1 class="visually-hidden">Product list</h1>
+                <div class="products-to-show">
+                    <!-- Product list generated JS -->
+                </div>
+            </section>
+
+            <!-- Пагінація. -->
+            <nav class="pages-list">
+                <button class="page-n-info" data-type="prev"><img data-type="prev" src="../img/SVG/right-arrow-brovn.svg" alt="arrow"></button>
+                <div class="page-n-info selected-page">1</div>
+                <button class="page-n-info" data-type="next"><img data-type="next" src="../img/SVG/right-arrow-brovn.svg" alt="arrow"></button>
+            </nav>
+        </main>
+
+        <footer>
+            <div class="contacts-container">
+                <div class="contacts">
+                    <ul class="list online">
+                        <li>ORDERING ONLINE</li>
+                        <li>Account Login</li>
+                        <li>Our Guarantee</li>
+                        <li>Sportif Stretch Guide</li>
+                        <li>Size Chart & Sizing Information</li>
+                        <li>Hemming Information</li>
+                        <li>Ordering & Payment</li>
+                        <li>Shipping Information</li>
+                    </ul>
+                    <ul class="list about">
+                        <li>ABOUT SPORTIF</li>
+                        <li>COVID-19 Response</li>
+                        <li>History</li>
+                        <li>Legacy</li>
+                        <li>Good Sam Program</li>
+                        <li>Privacy & Security</li>
+                        <li>Terms & Conditions</li>
+                        <li>Careers</li>
+                    </ul>
+                    <ul class="list links">
+                        <li>QUICK LINKS</li>
+                        <li>FAQs</li>
+                        <li>Shop Online Catalog</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="subscribe">
+                    <ul class="list sign-up">
+                        <li>GET TO KNOW US</li>
+                        <li>Sign up for our weekly newsletter and get a 10% off coupon by email for your first order!</li>
+                    </ul>
+                    <ul class="list form">
+                        <li>Sign Up for Our Newsletter:</li>
+                        <li>
+                        <!-- Ця форма надає інфо про нового користувача для відправки на пошту адміністратора -->  
+                            <form action="#" class="footer-form" data-netlify ="true" id="form" name="footer_form-2">
+                                <input class="footer-form-email" type="email" id="mail" name="new user Email:" placeholder="EMAIL ADDRESS">
+                                <button class="footer-form-btn" type="submit">SUBSCRIBE</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">©2021 Sportif Mailorder. All Rights Reserved.</div>
+        </footer>
+
+        <!-- Модальне вікно. -->
+        <div class="modal hide">
+            <div class="modal-product-about">
+                <div class="close-modal">&#x2715;</div>
+                <div class="modal-product">
+                    <div class="modal-image-main">
+                    <div class="modal-image-main-container"><!-- Product list generated JS --></div>
+                    <div class="modal-image-secondary">
+                        <!-- Product list generated JS --> 
+                    </div>
+                </div>
+                <div class="modal-product-description">
+                    <div class="modal-product-tiitle">
+                        <div class="modal-product-name">
+                        <!-- Product list generated JS -->
+                        </div>
+                        <div class="modal-product-rating">
+                            <div class="modal-product-stars">
+                            <!-- Product rating generated JS -->
+                            </div>
+                            <p>93 REVIEWS</p> 
+                        </div>
+                    </div>
+                    <div class="modal-product-data">
+                        <div class="modal-product-price">
+                            As low as<br>
+                            <span class="low-price"><!-- Product list generated JS --></span>
+                        </div>
+                        <div class="modal-product-colors">
+                            <div>COLOR:</div>
+                            <div class="color-wrapper">
+                                <!-- Product list generated JS -->
+                            </div>
+                        </div>
+                        <div class="modal-product-sizes">
+                            <span>SIZE:</span>
+                            <div class="size-wrapper">
+                                <!-- Product list generated JS -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-product-buttons">
+                        <button class="add-to-bag">
+                            <img src="../img/SVG/bags.svg" alt="bags">
+                            <span>ADD TO BAG</span>
+                        </button>
+                        <button class="add-to-wishlist">
+                            <img src="../img/SVG/heart-link.svg" alt="heart">
+                            <span>ADD TO WISHLIST</span>
+                        </button>
+                    </div>
+                    <div class="modal-product-social">
+                        <a href="https://uk-ua.facebook.com/" target="_blank">
+                        <img src="../img/SVG/facebook.svg" alt="face">
+                        </a>
+                        <a href="https://twitter.com/?lang=uk" target="_blank">
+                        <img src="../img/SVG/twitter.svg" alt="twitt">
+                        </a>
+                        <a href="https://www.pinterest.com/PinterestUA/" target="_blank">
+                        <img src="../img/SVG/pinterest.svg" alt="pint">
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                        <img src="../img/SVG/link.svg" alt="link">
+                        </a>
+                    </div>
+                </div>
+                </div>
+                <div class="modal-shipping">
+                    <img src="../img/SVG/shopping.svg" alt="shopping">
+                </div>
+            </div>
+        </div>
+
+        <!-- Кнопка на гору. -->
+        <div class="legacy-arrow hide">
+            <img src="../img/SVG/arrow.svg" alt="arrow">
+        </div>  
+
+        <!-- Лоудер. -->
+        <div class="loader_box hide">
+            <span class="loader"></span>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/7fc5c6640b.js" crossorigin="anonymous"></script>
+    <script src="../code/catalog-page.js" type="module"></script>
+    <script src="../code/methods/modal.js" type="module"></script>
+</body>
+
+</html>
+

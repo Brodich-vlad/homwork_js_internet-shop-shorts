@@ -1,0 +1,146 @@
+
+@media (max-width: 960px) {
+    /* Модалка. */
+    .modal-form-about,
+    .modal-product-about {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-shipping{
+        width: 100%;
+    }
+}
+
+@media (max-width: 875px){
+    /* Модалка. */
+    .modal-product-about{
+        margin-top: 5rem;
+    }
+
+    .modal-product{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .modal-image-main{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    .modal-product-name{
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .modal-image-main-container{
+        margin: 2rem;
+    }
+
+    .modal-image-main-container > img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .modal-image-secondary > div {
+        width: 15rem;
+        height: 15rem;
+        display: flex;
+    }
+
+    .modal-product-rating{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-product-data{
+        text-align: center;
+    }
+
+    .modal-product-social{
+        margin: 0 auto;
+    }
+    
+    .modal-product-social a{
+        margin: 2rem;
+        width: 25px;
+    }  
+
+
+    .modal-product-buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .add-to-bag,
+    .add-to-wishlist {
+        width: 90%;
+    }
+
+    .close-modal {
+        position: fixed;
+        font-size: 4.5rem;
+        color: white;
+        top: 1.5rem;
+        right: 8%;
+    }
+
+    /* Вікно повідомлення. */
+    .message-box{
+        width: 80%;
+    }
+
+    .message-box-img{
+        width: 40%;
+    }
+
+    .message-btns{
+        flex-direction: column;
+    }
+    
+    .message-btns button{
+        width: 80%;
+    }
+
+     /* Модальне вікно авторизації. */
+    .modal-form-js{
+        width: 100%;
+    }
+
+    .form-list{
+        width: 70%;
+    }
+}
+
+@media (max-width: 580px){
+     /* Модалка. */
+    .modal-image-secondary > div {
+        width: 10rem;
+        height: 10rem;
+    }
+    /* Модальне вікно авторизації. */
+    .form-list{
+        width: 100%;
+    }
+    .form-list-item:hover,
+    .form-list-item:focus{
+        transform: scale(1.05);
+    }
+
+}
+
+@media (max-width: 470px){
+     /* Модалка. */
+    .modal-image-secondary > div {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    /* Вікно повідомлення. */
+    .message-box{
+        width: 70%;
+    }
+}

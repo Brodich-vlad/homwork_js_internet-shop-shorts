@@ -1,0 +1,472 @@
+/* ------------------ MODAL -------------------------- */
+.modal-form,
+.modal {
+    z-index: 60;
+    background-color: rgba(94, 89, 89, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-form-about,
+.modal-product-about {
+    max-width: 145rem;
+    max-height: 80%;
+    background-color: white;
+    width: 80%;
+    position: relative;
+    padding: 3rem;
+    border-radius: .3rem;
+    overflow: auto;
+}
+
+.modal-product{
+    width: 90%;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    padding: 2rem 1rem 1rem 1rem;
+    margin: 0 auto;
+}
+
+.modal-image-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+  
+.modal-image-main img {
+    display: block;
+    max-width: 30rem;
+}
+
+.modal-image-main-container{
+    min-height: 30rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.modal-product-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+  
+.modal-product-description > div {
+    padding-bottom: 2rem;
+}
+  
+.modal-product-name {
+    font-weight: 600;
+    font-size: 4.8rem;
+    line-height: 1.6;
+}
+  
+.modal-product-name > span {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+}
+
+.modal-product-rating{
+    display: flex;
+    gap: 2rem;
+}
+
+.modal-product-stars {
+    display: flex;
+}
+
+.modal-product-stars span{
+    margin: .2rem;
+}
+
+.modal-product-rating > p {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.9;
+}
+  
+.modal-product-data {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    width: 100%;
+}
+  
+.modal-product-data > div {
+    padding-bottom: 2rem;
+}
+  
+.modal-product-price > span {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+  
+.color-wrapper div {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem 1rem 0 0;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: .3rem;
+}
+  
+.size-wrapper div {
+    display: inline-block;
+    width: 4.5rem;
+    height: 3rem;
+    margin: 1rem 1rem 0 0;
+    border: 1px solid #c4c4c4;
+    border-radius: .3rem;
+    text-align: center;
+    cursor: pointer;
+}
+  
+.modal-product-buttons {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+  
+.add-to-bag,
+.add-to-wishlist {
+    width: 31rem;
+    height: 40px;
+    padding: 1.2rem 0;
+    background-color: var(--main-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    border: 1px solid var(--main-color);
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.add-to-wishlist:hover,
+.add-to-bag:hover,
+.add-to-wishlist:focus,
+.add-to-bag:focus{
+    opacity: .8;
+}
+  
+.add-to-bag > span,
+.add-to-wishlist > span {
+    font-weight: 400;
+    font-size: 2.4rem;
+}
+  
+.add-to-wishlist {
+    background-color: #fff;
+    color: var(--main-color);
+}
+  
+.modal-product-social {
+    display: flex;
+}
+  
+.modal-product-social  img {
+    display: block;
+    width: 100%;
+}
+
+.modal-product-social a{
+    display: inline-block;
+    width: 3rem;
+    margin: 1rem;
+    transition: all .3s;
+}
+
+.modal-product-social a:hover,
+.modal-product-social a:focus{
+   opacity: .6;
+}
+
+.modal-image-secondary {
+    min-height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+  
+.modal-image-secondary > div {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modal-image-select{
+    border: 1px solid #333333;
+    border-radius: .3rem;
+}
+  
+.modal-image-secondary div > img {
+    display: block;
+    width: 80%;
+}
+
+.modal-shipping {
+   width: 80%;
+   margin: 0 auto;
+}
+.modal-shipping img {
+    display: block;
+    width: 100%;
+}
+  
+.close-modal {
+    position: absolute;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--main-color);
+    top: 1.5rem;
+    right: 3rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.close-modal:hover,
+.close-modal:focus{
+    transform: scale(1.1);
+}
+
+.e {
+    display: none;
+}
+
+ /* Модальне вікно авторизації. */
+
+.modal-form-js{
+    width: 90%;
+    border-radius: .3rem;
+    margin: 0 auto;
+    transition: all 1s;
+}
+
+.modal-form-title{
+    font-weight: 600;
+    font-size: 2.8rem;
+    line-height: 1.6; 
+    margin: 1rem;
+    text-align: center;
+}
+
+.form-list{
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.form-list-item{
+    display: flex;
+    border-radius: .3rem;
+    margin: 1rem;
+    padding: 1rem;
+    position: relative;
+    transition: all .3s;
+}
+
+.form-list-item input,
+.form-list-item textarea{
+    width: 100%;
+    border: none;
+    border-radius: .3rem;
+    background-color: rgb(192, 189, 189);
+    font-size: 2rem;
+    outline: none;
+    transition: all .3s;
+   
+}
+
+.form-list-item input{
+    padding: 1rem 1rem 1rem 4rem;
+    position: relative;
+}
+
+.form-list-item textarea{
+    padding: 1rem;
+}
+
+.form-list-item input._error{
+    box-shadow: 0 0 1.5rem red;
+}
+
+.form-list-item input:hover,
+.form-list-item textarea:hover,
+.form-list-item input:focus,
+.form-list-item textarea:focus{
+    box-shadow: 0 0 1.5rem rgb(5, 172, 5);
+}
+
+.form-list-item textarea{
+    resize: none;
+}
+.form-name-input-icon{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 2;
+}
+
+.form-name-input-icon > img{
+    display: block;
+    width: 100%;
+}
+
+.checkbox-label{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-label::before{
+    content: '';
+    align-self: flex-start;
+    flex: 0 0 2.4rem;
+    height: 2.4rem;
+    background: white;
+    border: 1px solid var(--main-color);
+    border-radius: .4rem;
+    margin: 0 1rem 0 0;
+}
+
+.checkbox-label::after{
+    content: '';
+    width: 1.6rem;
+    height: 1.6rem;
+    position: absolute;
+    top: .4rem;
+    left: .4rem;
+    background: var(--main-color);
+    border-radius: .4rem;
+    transform: scale(0);
+    transition: all .5s;
+}
+.checkbox-input{
+    display: none;
+}
+
+.checkbox-input:checked + .checkbox-label::after{
+    transform: scale(1); 
+}
+
+.checkbox-input._error + .checkbox-label::before{
+    box-shadow: 0 0 1.5rem red;
+}
+
+.form-list-checkbox{
+    padding: .5rem 1rem;
+    margin: 0 1rem;
+}
+
+.modal-form-btn{
+    width: 80%;
+    font-size: 2rem;
+    background: var(--main-color);
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+    margin: 1rem auto;
+    border: 1px solid var(--main-color);
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus{
+    opacity: .8;
+}
+
+
+ /* Вікно повідомлення. */
+.message{
+    background-color: #0000007e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.message-box{
+    width: 60%;
+    padding: 5rem;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: .3rem;
+}
+  
+  
+.message-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.message-btns button{
+    width: 40%;
+    font-size: 2rem;
+    background: white;
+    text-transform: uppercase;
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 2rem;
+    margin: 1rem;
+    border: 1px solid var(--main-color);
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.message-btns button:hover,
+.message-btns button:focus{
+    color: white;
+    background: var(--main-color);
+}
+
+.message-box-img{
+    width: 20%;
+    margin: 2rem auto;
+}
+
+.message-box-img img{
+    display: block;
+    width: 100%;
+}

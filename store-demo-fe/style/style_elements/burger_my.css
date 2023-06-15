@@ -1,0 +1,57 @@
+.open{
+    height: 100vh!important;
+}
+
+.overflow-hid{
+    overflow: hidden !important;
+}
+
+.burger{
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    justify-content: center;
+    width: 3.4em;
+    height: 3.4em;  
+}
+
+.burger span{
+    height: 0.3em;
+    width: 100%;
+    transform: scale(1);
+    background-color: black;
+}
+
+.burger::before {
+    content: "";
+    position: absolute;
+    height: 0.3em;
+    width: 100%;
+    background-color: black;
+    transition: all 0.3s ease 0s;
+    top: 0.4em;
+}
+
+.burger::after {
+    content: "";
+    position: absolute;
+    height: 0.3em;
+    width: 100%;
+    background-color: black;
+    transition: all 0.3s ease 0s;
+    bottom: 0.4em;
+}
+
+.burger.active>span{transform:scale(0)}
+
+.burger.active::before{
+    top:49%;
+    transform: rotate(-45deg) translate(0,-50%);
+}
+
+.burger.active::after {
+    bottom: 49%;
+    transform: rotate(45deg) translate(0, 50%);
+}

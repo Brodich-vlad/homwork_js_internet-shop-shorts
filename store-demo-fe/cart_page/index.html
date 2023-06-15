@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="/style/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style/index.css">    
+    <link rel="stylesheet" href="../style/media/index.css">
+</head>
+
+<body>
+    <div class="main-page">
+        
+        <header>
+            <div class="header-wrapper">
+                <div class="logo">
+                    <img src="../img/SVG/logotype.svg" alt="logo">
+                </div>
+                <div class="navigation">
+                    <div class="burger-container">
+                        <ul class="nav">
+                            <li><a href="../catalog_page/index.html">
+                              <span class="nav-icon">
+                                <img src="../img/SVG/icon_modal_send/shorts_icon.svg" alt="shorts">
+                              </span>SHORTS</a></li>
+                            <li class="nav-item"><a href="#">
+                              <span class="nav-icon">
+                                <img src="../img/SVG/icon_modal_send/pants.svg" alt="pants">
+                              </span>PANTS</a></li>
+                            <li><a href="#">
+                              <span class="nav-icon">
+                                <img src="../img/SVG/icon_modal_send/trousers.svg" alt="shorts">
+                              </span>SHIRTS</a></li>
+                            <li><a href="#">
+                              <span class="nav-icon">
+                                <img src="../img/SVG/icon_modal_send/accessories.svg" alt="accessories">
+                              </span>ACCESSORIES</a></li>
+                            <li><a href="#">
+                              <span class="nav-icon">
+                                <img src="../img/SVG/icon_modal_send/sale.svg" alt="accessories">
+                              </span>SALE</a></li>
+                          </ul>
+                    </div>
+
+                    <div class="search-box">
+                        <div class="search-btn fa-2x"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <input type="search" id="search-field" placeholder="SEARCH ENTIRE STORE">
+                    </div>
+
+                    <div class="basket-box">
+                        <span class="basket-counter hide-basket">0</span>         
+                        <svg class="cart" role="img" aria-label="Shopping cart line animation" viewBox="0 0 128 128" width="35px" height="35px" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+                                <g class="cart__track" stroke="hsla(0,10%,10%,0.1)">
+                                    <polyline points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80" />
+                                    <circle cx="43" cy="111" r="13" />
+                                    <circle cx="102" cy="111" r="13" />
+                                </g>
+                                <g class="cart__lines" stroke="currentColor">
+                                    <polyline class="cart__top" points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80" stroke-dasharray="338 338" stroke-dashoffset="-338" />
+                                    <g class="cart__wheel1" transform="rotate(-90,43,111)">
+                                        <circle class="cart__wheel-stroke" cx="43" cy="111" r="13" stroke-dasharray="81.68 81.68" stroke-dashoffset="81.68" />
+                                    </g>
+                                    <g class="cart__wheel2" transform="rotate(90,102,111)">
+                                        <circle class="cart__wheel-stroke" cx="102" cy="111" r="13" stroke-dasharray="81.68 81.68" stroke-dashoffset="81.68" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search product list -->
+        <ul class="search-product-list hide" id="product-name"><!-- Search list generated JS --></ul>
+
+        <main>
+
+            <nav class="main-search">
+                <div class="home-navigation-container">
+                    <span><a href="../"><img src="../img/SVG/house.svg" alt="house"></a></span>
+                    <span><a href="../">HOME</a></span>
+                    <span><img src="../img/SVG/right-arrow.svg" alt="arrow"></span>
+                    <span>YOUR CART</span>
+                </div>
+            </nav>
+
+            <section class="your-cart">
+                <h1 class="cart-heading">YOUR CART</h1>
+                <div class="cart-basket-empty hide">
+                    <h2 class="cart-basket-empty-title">Your basket is empty.</h2>
+                    <div class="cart-basket-empty-img">
+                        <img src="../img/SVG/basket-empty.svg" alt="basket-empty">
+                    </div>
+                    <button class="cart-basket-empty-btn" type="button">Return to shopping</button>
+                </div>
+                <div class="cart-products hide">
+                    <ul  class="cart-products-list">
+                        <li class="cart-list-head" >
+                            <h2 class="cart-list-head_title">Item</h2>
+                            <p class="list-head_title">Price</p>
+                            <p class="list-head_title">Quantity</p>
+                            <p class="list-head_title">Total</p>
+                        </li>
+                        <li  id="cart-list-products">
+                            <!-- Product list generated JS -->
+                        </li>
+
+                        <li class="data-cart">
+                            <div class="btn-check">Return to shopping</div>
+                            <div class="data-cart-subtotal">
+                                <h2>Grand total:</h2>
+                                <div class="cart-grand-total"><!-- Product list generated JS --></div>
+                                <div class="btn-apply">complete an application</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="contacts-container">
+                <div class="contacts">
+                    <ul class="list online">
+                        <li>ORDERING ONLINE</li>
+                        <li>Account Login</li>
+                        <li>Our Guarantee</li>
+                        <li>Sportif Stretch Guide</li>
+                        <li>Size Chart & Sizing Information</li>
+                        <li>Hemming Information</li>
+                        <li>Ordering & Payment</li>
+                        <li>Shipping Information</li>
+                    </ul>
+                    <ul class="list about">
+                        <li>ABOUT SPORTIF</li>
+                        <li>COVID-19 Response</li>
+                        <li>History</li>
+                        <li>Legacy</li>
+                        <li>Good Sam Program</li>
+                        <li>Privacy & Security</li>
+                        <li>Terms & Conditions</li>
+                        <li>Careers</li>
+                    </ul>
+                    <ul class="list links">
+                        <li>QUICK LINKS</li>
+                        <li>FAQs</li>
+                        <li>Shop Online Catalog</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="subscribe">
+                    <ul class="list sign-up">
+                        <li>GET TO KNOW US</li>
+                        <li>Sign up for our weekly newsletter and get a 10% off coupon by email for your first order!</li>
+                    </ul>
+                    <ul class="list form">
+                        <li>Sign Up for Our Newsletter:</li>
+                        <li>
+                         <!-- Ця форма надає інфо про нового користувача для відправки на пошту адміністратора -->
+                            <form action="#" class="footer-form" data-netlify ="true" id="form" name="footer_form-3">
+                                <input class="footer-form-email" type="email" id="mail" name="New user Email:" placeholder="EMAIL ADDRESS">
+                                <button class="footer-form-btn" type="submit">SUBSCRIBE</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">©2021 Sportif Mailorder. All Rights Reserved.</div>
+        </footer>
+
+        <!-- Модальне вікно. -->
+        <div class="modal hide">
+            <div class="modal-product-about">
+                <div class="close-modal" id="close-modal">&#x2715;</div>
+                <div class="modal-product">
+                    <div class="modal-image-main">
+                    <div class="modal-image-main-container"><!-- Product list generated JS --></div>
+                    <div class="modal-image-secondary">
+                        <!-- Product list generated JS --> 
+                    </div>
+                </div>
+                <div class="modal-product-description">
+                    <div class="modal-product-tiitle">
+                        <div class="modal-product-name">
+                        <!-- Product list generated JS -->
+                        </div>
+                        <div class="modal-product-rating">
+                            <div class="modal-product-stars">
+                            <!-- Product rating generated JS -->
+                            </div>
+                            <p>93 REVIEWS</p> 
+                        </div>
+                    </div>
+                    <div class="modal-product-data">
+                        <div class="modal-product-price">
+                            As low as<br>
+                            <span class="low-price"><!-- Product list generated JS --></span>
+                        </div>
+                        <div class="modal-product-colors">
+                            <div>COLOR:</div>
+                            <div class="color-wrapper">
+                                <!-- Product list generated JS -->
+                            </div>
+                        </div>
+                        <div class="modal-product-sizes">
+                            <span>SIZE:</span>
+                            <div class="size-wrapper">
+                                <!-- Product list generated JS -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-product-buttons">
+                        <button class="add-to-bag">
+                            <img src="../img/SVG/bags.svg" alt="bags">
+                            <span>ADD TO BAG</span>
+                        </button>
+                        <button class="add-to-wishlist">
+                            <img src="../img/SVG/heart-link.svg" alt="heart">
+                            <span>ADD TO WISHLIST</span>
+                        </button>
+                    </div>
+                    <div class="modal-product-social">
+                        <a href="https://uk-ua.facebook.com/" target="_blank">
+                        <img src="../img/SVG/facebook.svg" alt="face">
+                        </a>
+                        <a href="https://twitter.com/?lang=uk" target="_blank">
+                        <img src="../img/SVG/twitter.svg" alt="twitt">
+                        </a>
+                        <a href="https://www.pinterest.com/PinterestUA/" target="_blank">
+                        <img src="../img/SVG/pinterest.svg" alt="pint">
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                        <img src="../img/SVG/link.svg" alt="link">
+                        </a>
+                    </div>
+                </div>
+                </div>
+                <div class="modal-shipping">
+                <img src="../img/SVG/shopping.svg" alt="shopping">
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальне вікно авторизації та підтвердження замовлення. -->
+        <div class="modal-form hide">
+            <div class="modal-form-about">
+                <div class="close-modal" id="close-modal-form">&#x2715;</div>
+                <form action="#" class="modal-form-js" name="modal_form">
+                    <h2 class="modal-form-title">Please fill out the contact form</h2>
+                    <ul class="form-list">
+                        <li class="form-list-item">
+                            <div class="form-name-input-icon">
+                                <img src="../img/SVG/icon_modal_send/person.svg" alt="person">
+                            </div>
+                            <input class="form-name-input _req" type="text" name="Name:" id="modal-form-name" placeholder="* Your name:">
+                        </li>
+                        <li class="form-list-item">
+                            <div class="form-name-input-icon">
+                                <img src="../img/SVG/icon_modal_send/phone.svg" alt="phone">
+                            </div>
+                            <input class="form-tel-input _req" type="tel" name="Phone:" id="modal-form-tel" placeholder="* Сontact phone number:">
+                        </li>
+                        <li class="form-list-item">
+                            <div class="form-name-input-icon">
+                                <img src="../img/SVG/icon_modal_send/email.svg" alt="email">
+                            </div>
+                            <input class="form-email-input _req" type="email" name="Email:" id="modal-form-email" placeholder="* Сontact email address:">
+                        </li>
+                        <li class="form-list-item">
+                            <textarea class="form-message-input _req"  name="Message:" id="modal-form-message" placeholder="Comment:"></textarea>
+                        </li>
+                        <li class="form-list-checkbox">
+                            <input class="checkbox-input _req" type="checkbox" name="check" id="modal-form-check">
+                            <label class="checkbox-label" for="modal-form-check"><span>Confirm the order for the amount: <span class="modal-form-total-price"><!-- Total price generated JS --></span> ₴ </span> </label> 
+                        </li>
+                        <li class="form-list-item">
+                            <button class="modal-form-btn" id="modal-form-btn" type="button">Send an application</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+
+        <!-- Кнопка на гору. -->
+        <div class="legacy-arrow hide">
+           <img src="../img/SVG/arrow.svg" alt="arrow">
+        </div>  
+        <!-- Лоудер. -->
+        <div class="loader_box hide">
+            <span class="loader"></span>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/7fc5c6640b.js" crossorigin="anonymous"></script>
+    <script src="../code/cart_page.js" type="module"></script>
+</body>
+
+</html>
